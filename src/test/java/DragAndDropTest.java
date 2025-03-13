@@ -1,5 +1,6 @@
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.DragAndDropOptions;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -16,6 +17,10 @@ public class DragAndDropTest {
     @BeforeEach
     void openForm(){
         open("https://the-internet.herokuapp.com/drag_and_drop");
+    }
+    @AfterEach
+    void closeBrowser(){
+        closeWebDriver();
     }
 
     @Test
